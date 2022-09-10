@@ -29,9 +29,4 @@ if (url.indexOf(vip) != -1) {
     obj.data.expireTime = "2209-12-31T23:59:59+08:00";
     body = JSON.stringify(obj);
 }
-if (url.indexOf(pay) != -1) {
-    obj.data.level = 2;
-    obj.data.isExpire = false;
-    obj.data.expireTime = "2209-12-31T23:59:59+08:00";
-    body = JSON.stringify(obj);
 $done({body});
