@@ -9,7 +9,8 @@
 
 [rewrite_local]
 # > Cubox 解锁高级版订阅
-^https:\/\/cubox\.pro\/c\/api\/.+ url script-response-body cubox.js
+^https:\/\/cubox\.pro\/c\/api\/userInfo url script-response-body https://raw.githubusercontent.com/carrysue/Quantumult-X/main/Scripts/cubox.js
+
 [mitm] 
 hostname = cubox.pro
 
@@ -32,4 +33,5 @@ if (url.indexOf(pay) != -1) {
     obj.data.level = 2;
     obj.data.isExpire = false;
     obj.data.expireTime = "2209-12-31T23:59:59+08:00";
+    body = JSON.stringify(obj);
 $done({body});
