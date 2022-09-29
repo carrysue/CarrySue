@@ -1,0 +1,103 @@
+[filter_local]
+
+
+# 本地分流规则(相同规则下，本地规则将覆盖远程规则，优先生效)
+#pt站点分流
+host-suffix, hdarea.co, direct
+host-suffix, haidan.video, direct
+host-suffix, hddolby.com, direct
+host, pt.soulvoice.club, direct
+host, audiences.me, direct
+host-suffix, m-team.cc, direct
+#emby规则
+host, cc.ccemby.tk, direct
+host, cf.emby.ml, direct
+host, emby-pub1.blueseacdn.com, direct
+host, emby-peach.blueseacdn.com, direct
+host-suffix, 404.sb, direct
+
+#福利网站去广告
+#https://qa666.xyz?tg=1959655
+host, www.govchengdu.cn, reject
+host, aig.aigzg.com, reject
+host, pv.dakawm.cc, reject
+host, www.govxian.cn, reject
+
+#水果派去广告
+host, errlog.umeng.com, reject
+host, ulogs.umengcloud.com, reject
+
+#Logolabn去广告
+host, kksdk.tapque.com, reject
+host, omsdkapi.tapque.com, reject
+host, sdk.kkpromotion.tapque.com, reject
+#appcake去广告
+host, sdk.adtiming.com, reject
+
+#网络播放去广告
+host, googleads.g.doubleclick.net, reject
+#看吧去广告
+#下载地址：https://kanba.app
+host, ulogs.umeng.com, reject
+host, plbslog.umeng.com, reject
+
+#桔子去广告
+#桔子网址：https://jzavbus.com
+host, ap.91adv.com.cn, reject
+
+#快活
+host, search1.kuaihuoapi.com, reject
+
+#阅友去广告
+host, ads.reader.yueyouxs.com, reject
+
+#人人视频
+host, mdapi.opsvwa.xyz, reject
+host, mdapi.lyvsas.fun, reject
+host, mdapi.mdlzyx.me, reject
+host, avapp.calvapib.me, reject
+host, avapp.calvapic.me, reject
+host, avapp.calvapid.me, reject
+
+#人人视频
+host, eleven.bayescom.cn, reject
+host, cloudconf.fengkongcloud.com, reject
+host, v2.gdt.qq.com, reject
+host, ulogs.umeng.com, reject
+host, adashxgc.ut.taobao.com, reject
+host, www.qchannel01.cn, reject
+host, sf6-fe-tos.pglstatp-toutiao.com, reject
+host, api-access.pangolin-sdk-toutiao.com, reject
+host, av1.xdrig.com, reject
+host, sdk.e.qq.com, reject
+
+#小小影视去广告
+host, acf.huaerdadi.com, reject
+host, ios.bugly.qq.com, reject
+host, p.juxuyun.com, reject
+
+
+# 绕过企业证书过期
+host, ocsp.apple.com, reject
+#YouTube 去底部广告
+host-suffix, ehg-youtube.hitbox.com, reject
+
+
+
+# 避免迅雷版权问题
+host, hub5idx.v6.shub.sandai.net, reject
+host, hub5emu.v6.shub.sandai.net, reject
+host, hub5btmain.v6.shub.sandai.net, reject
+
+# 其他
+host-suffix, local, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 100.64.0.0/10, direct
+ip-cidr, 224.0.0.0/4, direct
+ip6-cidr, fe80::/10, direct
+ip-cidr, 203.107.1.1/24, reject
+-geoip, cn, direct
+final, 黑白名单
