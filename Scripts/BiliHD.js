@@ -1,3 +1,15 @@
+/******************************
+脚本功能：Bilibili
+使用声明：⚠️此脚本仅供学习与交流⚠️
+*******************************
+[rewrite_local]
+# > bilibili
+^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/carrysue/Quantumult-X/main/Scripts/BiliHD.js
+[mitm] 
+hostname = api.bilibili.com
+*******************************/
+
+
 var body = $response.body;
 var url = $request.url;
 
